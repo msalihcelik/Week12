@@ -94,6 +94,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         addSubView()
+        self.view.backgroundColor = .white
     }
     
     private func addSubView() {

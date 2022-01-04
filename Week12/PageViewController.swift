@@ -12,57 +12,67 @@ import TinyConstraints
 class PageViewController: UIViewController, UIGestureRecognizerDelegate {
     
     lazy var view0: UIView = {
-        let view = UIView()
-        view.backgroundColor = .red
-        let label = UILabel()
-        label.text = "page 1"
-        label.textAlignment = .center
+        let view = UIViewBuilder()
+            .backgroundColor(.red)
+            .build()
+        let label = UILabelBuilder()
+            .text("Page 1")
+            .textAlignment(.center)
+            .build()
         view.addSubview(label)
         label.edgesToSuperview()
         return view
     }()
     
     lazy var view1: UIView = {
-        let view = UIView()
-        view.backgroundColor = .blue
-        let label = UILabel()
-        label.text = "page 2"
-        label.textAlignment = .center
+        let view = UIViewBuilder()
+            .backgroundColor(.blue)
+            .build()
+        let label = UILabelBuilder()
+            .text("Page 2")
+            .textAlignment(.center)
+            .build()
         view.addSubview(label)
         label.edgesToSuperview()
         return view
     }()
     
     lazy var view2: UIView = {
-        let view = UIView()
-        view.backgroundColor = .yellow
-        let label = UILabel()
-        label.text = "page 3"
-        label.textAlignment = .center
+        let view = UIViewBuilder()
+            .backgroundColor(.yellow)
+            .build()
+        let label = UILabelBuilder()
+            .text("Page 3")
+            .textAlignment(.center)
+            .build()
         view.addSubview(label)
         label.edgesToSuperview()
         return view
     }()
     
     lazy var button: UILabel = {
-        let button = UILabel()
-        button.text = "One Tap"
-        button.layer.backgroundColor = UIColor.white.cgColor
-        button.layer.cornerRadius = 5
-        button.layer.borderColor = UIColor.black.cgColor
-        button.layer.borderWidth = 2
-        button.textAlignment = .center
+        let button = UILabelBuilder()
+            .text("One Tap")
+            .backgroundColor(.white)
+            .cornerRadius(5)
+            .borderColor(UIColor.black.cgColor)
+            .borderWidth(2)
+            .textAlignment(.center)
+            .masksToBounds(true)
+            .build()
         return button
     }()
     
     lazy var buttonDouble: UILabel = {
-        let button = UILabel()
-        button.text = "Double Tap"
-        button.layer.backgroundColor = UIColor.white.cgColor
-        button.layer.cornerRadius = 5
-        button.layer.borderColor = UIColor.black.cgColor
-        button.layer.borderWidth = 2
-        button.textAlignment = .center
+        let button = UILabelBuilder()
+            .text("Double Tap")
+            .backgroundColor(.white)
+            .cornerRadius(5)
+            .borderColor(UIColor.black.cgColor)
+            .borderWidth(2)
+            .textAlignment(.center)
+            .masksToBounds(true)
+            .build()
         return button
     }()
     

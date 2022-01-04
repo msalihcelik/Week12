@@ -17,6 +17,7 @@
 		672BBFC227833ADC00B8F05F /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = 672BBFC127833ADC00B8F05F /* TinyConstraints */; };
 		672BBFC527833B0400B8F05F /* MobilliumBuilders in Frameworks */ = {isa = PBXBuildFile; productRef = 672BBFC427833B0400B8F05F /* MobilliumBuilders */; };
 		672BBFC9278464F900B8F05F /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672BBFC8278464F900B8F05F /* PageViewController.swift */; };
+		672BBFCD2784FA4500B8F05F /* DashboardTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672BBFCC2784FA4500B8F05F /* DashboardTabBarController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		672BBFB62779D7F400B8F05F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		672BBFB82779D7F400B8F05F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		672BBFC8278464F900B8F05F /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		672BBFCC2784FA4500B8F05F /* DashboardTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTabBarController.swift; sourceTree = "<group>"; };
 		C728510FD378F76F8A1A7D6F /* Pods_Week12.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Week12.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8E36CA77C0372198FBF0CEE /* Pods-Week12.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Week12.release.xcconfig"; path = "Target Support Files/Pods-Week12/Pods-Week12.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -85,6 +87,7 @@
 				672BBFB52779D7F400B8F05F /* LaunchScreen.storyboard */,
 				672BBFB82779D7F400B8F05F /* Info.plist */,
 				672BBFC8278464F900B8F05F /* PageViewController.swift */,
+				672BBFCC2784FA4500B8F05F /* DashboardTabBarController.swift */,
 			);
 			path = Week12;
 			sourceTree = "<group>";
@@ -222,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				672BBFAF2779D7F300B8F05F /* ViewController.swift in Sources */,
+				672BBFCD2784FA4500B8F05F /* DashboardTabBarController.swift in Sources */,
 				672BBFAB2779D7F300B8F05F /* AppDelegate.swift in Sources */,
 				672BBFAD2779D7F300B8F05F /* SceneDelegate.swift in Sources */,
 				672BBFC9278464F900B8F05F /* PageViewController.swift in Sources */,
