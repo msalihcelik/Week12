@@ -25,7 +25,9 @@ class DashboardTabBarController: UITabBarController {
         let icon1 = UITabBarItem(title: "Register", image: UIImage(systemName: "person"), selectedImage: UIImage(systemName: "person"))
         let icon2 = UITabBarItem(title: "Color", image: UIImage(systemName: "book"), selectedImage: UIImage(systemName: "book"))
         item1.tabBarItem = icon1
+        item1.title = "Register"
         item2.tabBarItem = icon2
+        item2.title = "PageVC"
         let controllers = [item1, item2]
         self.viewControllers = controllers
     }

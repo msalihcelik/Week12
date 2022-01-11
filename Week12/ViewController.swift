@@ -93,11 +93,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addSubView()
+        addSubViews()
         self.view.backgroundColor = .white
     }
     
-    private func addSubView() {
+    private func addSubViews() {
         view.addSubview(scrollView)
         scrollView.edgesToSuperview(excluding: .bottom, insets: .top(50), usingSafeArea: true)
         
