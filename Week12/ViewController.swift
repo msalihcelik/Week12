@@ -15,8 +15,7 @@ class ViewController: UIViewController {
         .bounces(true)
         .build()
     
-    private let contentView = UIViewBuilder()
-        .build()
+    private let contentView = UIViewBuilder().build()
     
     private let contentStackView = UIStackViewBuilder()
         .axis(.vertical)
@@ -25,78 +24,47 @@ class ViewController: UIViewController {
         .alignment(.fill)
         .build()
     
-    private let nickTextField: UITextField = {
-        let textField = UITextField()
-        textField.placeholder = "Nick"
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.textAlignment = .left
-        textField.backgroundColor = .clear
-        return textField
-    }()
+    private let nickTextField = UITextFieldBuilder()
+        .placeholder("Nick")
+        .build()
     
-    private let nameTextField: UITextField = {
-        let textField = UITextField()
-        textField.placeholder = "Name"
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.textAlignment = .left
-        textField.backgroundColor = .clear
-        return textField
-    }()
+    private let nameTextField = UITextFieldBuilder()
+        .placeholder("Name")
+        .build()
     
-    private let surnameTextField: UITextField = {
-        let textField = UITextField()
-        textField.placeholder = "Surname"
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.textAlignment = .left
-        textField.backgroundColor = .clear
-        return textField
-    }()
+    private let surnameTextField = UITextFieldBuilder()
+        .placeholder("Surname")
+        .build()
     
-    private let passwordTextField: UITextField = {
-        let textField = UITextField()
-        textField.placeholder = "Password"
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.textAlignment = .left
-        textField.backgroundColor = .clear
-        return textField
-    }()
+    private let passwordTextField = UITextFieldBuilder()
+        .placeholder("Password")
+        .build()
     
-    private let retypePasswordTextField: UITextField = {
-        let textField = UITextField()
-        textField.placeholder = "RetypePassword"
-        textField.translatesAutoresizingMaskIntoConstraints = false
-        textField.textAlignment = .left
-        textField.backgroundColor = .clear
-        return textField
-    }()
+    private let retypePasswordTextField = UITextFieldBuilder()
+        .placeholder("RetypePassword")
+        .build()
     
-    private let registerButton: UIButton = {
-        let button = UIButton()
-        button.translatesAutoresizingMaskIntoConstraints = false
-        button.setTitleColor(.gray, for: .normal)
-        button.setTitle("Register", for: .normal)
-        button.layer.borderColor = UIColor.black.cgColor
-        button.layer.borderWidth = 1
-        button.setTitleColor(.black, for: .normal)
-        return button
-    }()
+    private let registerButton = UIButtonBuilder()
+        .title("Register")
+        .titleColor(.gray)
+        .borderColor(UIColor.black.cgColor)
+        .borderWidth(1)
+        .titleColor(.black)
+        .build()
     
-    private let registerStackView: UIStackView = {
-        let stackView = UIStackView()
-        stackView.translatesAutoresizingMaskIntoConstraints = false
-        stackView.axis = .vertical
-        stackView.spacing = 10
-        stackView.alignment = .fill
-        stackView.distribution = .fill
-        return stackView
-    }()
+    private let registerStackView = UIStackViewBuilder()
+        .axis(.vertical)
+        .spacing(10)
+        .alignment(.fill)
+        .distribution(.fill)
+        .build()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        addSubView()
+        addSubViews()
     }
     
-    private func addSubView() {
+    private func addSubViews() {
         view.addSubview(scrollView)
         scrollView.edgesToSuperview(excluding: .bottom, insets: .top(50), usingSafeArea: true)
         
