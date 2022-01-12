@@ -13,6 +13,10 @@
 		672BBFB22779D7F300B8F05F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672BBFB02779D7F300B8F05F /* Main.storyboard */; };
 		672BBFB42779D7F400B8F05F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 672BBFB32779D7F400B8F05F /* Assets.xcassets */; };
 		672BBFB72779D7F400B8F05F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672BBFB52779D7F400B8F05F /* LaunchScreen.storyboard */; };
+		67ACF5AE278E8F6400B5CB90 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67ACF5AC278E8F6400B5CB90 /* CustomViewController.swift */; };
+		67ACF5AF278E8F6400B5CB90 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67ACF5AD278E8F6400B5CB90 /* PageViewController.swift */; };
+		67ACF5B2278E8F8A00B5CB90 /* MobilliumBuilders in Frameworks */ = {isa = PBXBuildFile; productRef = 67ACF5B1278E8F8A00B5CB90 /* MobilliumBuilders */; };
+		67ACF5B5278E8F9700B5CB90 /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = 67ACF5B4278E8F9700B5CB90 /* TinyConstraints */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +28,8 @@
 		672BBFB32779D7F400B8F05F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		672BBFB62779D7F400B8F05F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		672BBFB82779D7F400B8F05F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		67ACF5AC278E8F6400B5CB90 /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
+		67ACF5AD278E8F6400B5CB90 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				67ACF5B2278E8F8A00B5CB90 /* MobilliumBuilders in Frameworks */,
+				67ACF5B5278E8F9700B5CB90 /* TinyConstraints in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,6 +68,8 @@
 				672BBFAC2779D7F300B8F05F /* SceneDelegate.swift */,
 				672BBFAE2779D7F300B8F05F /* ViewController.swift */,
 				672BBFB02779D7F300B8F05F /* Main.storyboard */,
+				67ACF5AC278E8F6400B5CB90 /* CustomViewController.swift */,
+				67ACF5AD278E8F6400B5CB90 /* PageViewController.swift */,
 				672BBFB32779D7F400B8F05F /* Assets.xcassets */,
 				672BBFB52779D7F400B8F05F /* LaunchScreen.storyboard */,
 				672BBFB82779D7F400B8F05F /* Info.plist */,
@@ -83,6 +93,10 @@
 			dependencies = (
 			);
 			name = Week12;
+			packageProductDependencies = (
+				67ACF5B1278E8F8A00B5CB90 /* MobilliumBuilders */,
+				67ACF5B4278E8F9700B5CB90 /* TinyConstraints */,
+			);
 			productName = Week12;
 			productReference = 672BBFA72779D7F300B8F05F /* Week12.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +125,10 @@
 				Base,
 			);
 			mainGroup = 672BBF9E2779D7F300B8F05F;
+			packageReferences = (
+				67ACF5B0278E8F8A00B5CB90 /* XCRemoteSwiftPackageReference "MobilliumBuilders" */,
+				67ACF5B3278E8F9700B5CB90 /* XCRemoteSwiftPackageReference "TinyConstraints" */,
+			);
 			productRefGroup = 672BBFA82779D7F300B8F05F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -139,8 +157,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				672BBFAF2779D7F300B8F05F /* ViewController.swift in Sources */,
+				67ACF5AF278E8F6400B5CB90 /* PageViewController.swift in Sources */,
 				672BBFAB2779D7F300B8F05F /* AppDelegate.swift in Sources */,
 				672BBFAD2779D7F300B8F05F /* SceneDelegate.swift in Sources */,
+				67ACF5AE278E8F6400B5CB90 /* CustomViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +380,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		67ACF5B0278E8F8A00B5CB90 /* XCRemoteSwiftPackageReference "MobilliumBuilders" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mobillium/MobilliumBuilders.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		67ACF5B3278E8F9700B5CB90 /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/roberthein/TinyConstraints.git";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		67ACF5B1278E8F8A00B5CB90 /* MobilliumBuilders */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67ACF5B0278E8F8A00B5CB90 /* XCRemoteSwiftPackageReference "MobilliumBuilders" */;
+			productName = MobilliumBuilders;
+		};
+		67ACF5B4278E8F9700B5CB90 /* TinyConstraints */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 67ACF5B3278E8F9700B5CB90 /* XCRemoteSwiftPackageReference "TinyConstraints" */;
+			productName = TinyConstraints;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 672BBF9F2779D7F300B8F05F /* Project object */;
 }
