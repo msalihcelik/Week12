@@ -7,15 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0378D21F5C8BA7152C1CF1D6 /* Pods_Week12.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C728510FD378F76F8A1A7D6F /* Pods_Week12.framework */; };
 		672BBFAB2779D7F300B8F05F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672BBFAA2779D7F300B8F05F /* AppDelegate.swift */; };
 		672BBFAD2779D7F300B8F05F /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672BBFAC2779D7F300B8F05F /* SceneDelegate.swift */; };
 		672BBFAF2779D7F300B8F05F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672BBFAE2779D7F300B8F05F /* ViewController.swift */; };
 		672BBFB22779D7F300B8F05F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672BBFB02779D7F300B8F05F /* Main.storyboard */; };
 		672BBFB42779D7F400B8F05F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 672BBFB32779D7F400B8F05F /* Assets.xcassets */; };
 		672BBFB72779D7F400B8F05F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672BBFB52779D7F400B8F05F /* LaunchScreen.storyboard */; };
+		672BBFC227833ADC00B8F05F /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = 672BBFC127833ADC00B8F05F /* TinyConstraints */; };
+		672BBFC527833B0400B8F05F /* MobilliumBuilders in Frameworks */ = {isa = PBXBuildFile; productRef = 672BBFC427833B0400B8F05F /* MobilliumBuilders */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1B077002628E0278BC826869 /* Pods-Week12.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Week12.debug.xcconfig"; path = "Target Support Files/Pods-Week12/Pods-Week12.debug.xcconfig"; sourceTree = "<group>"; };
 		672BBFA72779D7F300B8F05F /* Week12.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Week12.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		672BBFAA2779D7F300B8F05F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		672BBFAC2779D7F300B8F05F /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +28,8 @@
 		672BBFB32779D7F400B8F05F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		672BBFB62779D7F400B8F05F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		672BBFB82779D7F400B8F05F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C728510FD378F76F8A1A7D6F /* Pods_Week12.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Week12.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D8E36CA77C0372198FBF0CEE /* Pods-Week12.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Week12.release.xcconfig"; path = "Target Support Files/Pods-Week12/Pods-Week12.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0378D21F5C8BA7152C1CF1D6 /* Pods_Week12.framework in Frameworks */,
+				672BBFC527833B0400B8F05F /* MobilliumBuilders in Frameworks */,
+				672BBFC227833ADC00B8F05F /* TinyConstraints in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A2B76E44E0F42A20D86FE95 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C728510FD378F76F8A1A7D6F /* Pods_Week12.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		672BBF9E2779D7F300B8F05F = {
 			isa = PBXGroup;
 			children = (
 				672BBFA92779D7F300B8F05F /* Week12 */,
 				672BBFA82779D7F300B8F05F /* Products */,
+				DB3DAC5AAEEE17FBAF454587 /* Pods */,
+				1A2B76E44E0F42A20D86FE95 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +86,15 @@
 			path = Week12;
 			sourceTree = "<group>";
 		};
+		DB3DAC5AAEEE17FBAF454587 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				1B077002628E0278BC826869 /* Pods-Week12.debug.xcconfig */,
+				D8E36CA77C0372198FBF0CEE /* Pods-Week12.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,15 +102,21 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 672BBFBB2779D7F400B8F05F /* Build configuration list for PBXNativeTarget "Week12" */;
 			buildPhases = (
+				A06B3CA302DD88C639EC8B26 /* [CP] Check Pods Manifest.lock */,
 				672BBFA32779D7F300B8F05F /* Sources */,
 				672BBFA42779D7F300B8F05F /* Frameworks */,
 				672BBFA52779D7F300B8F05F /* Resources */,
+				4590C298CBA8BFBB7F6DF932 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = Week12;
+			packageProductDependencies = (
+				672BBFC127833ADC00B8F05F /* TinyConstraints */,
+				672BBFC427833B0400B8F05F /* MobilliumBuilders */,
+			);
 			productName = Week12;
 			productReference = 672BBFA72779D7F300B8F05F /* Week12.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +145,10 @@
 				Base,
 			);
 			mainGroup = 672BBF9E2779D7F300B8F05F;
+			packageReferences = (
+				672BBFC027833ADC00B8F05F /* XCRemoteSwiftPackageReference "TinyConstraints" */,
+				672BBFC327833B0400B8F05F /* XCRemoteSwiftPackageReference "MobilliumBuilders" */,
+			);
 			productRefGroup = 672BBFA82779D7F300B8F05F /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -132,6 +170,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		4590C298CBA8BFBB7F6DF932 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Week12/Pods-Week12-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Week12/Pods-Week12-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Week12/Pods-Week12-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A06B3CA302DD88C639EC8B26 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Week12-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		672BBFA32779D7F300B8F05F /* Sources */ = {
@@ -284,6 +364,7 @@
 		};
 		672BBFBC2779D7F400B8F05F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1B077002628E0278BC826869 /* Pods-Week12.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -312,6 +393,7 @@
 		};
 		672BBFBD2779D7F400B8F05F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8E36CA77C0372198FBF0CEE /* Pods-Week12.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -360,6 +442,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		672BBFC027833ADC00B8F05F /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/roberthein/TinyConstraints.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.0.0;
+			};
+		};
+		672BBFC327833B0400B8F05F /* XCRemoteSwiftPackageReference "MobilliumBuilders" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/mobillium/MobilliumBuilders.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		672BBFC127833ADC00B8F05F /* TinyConstraints */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 672BBFC027833ADC00B8F05F /* XCRemoteSwiftPackageReference "TinyConstraints" */;
+			productName = TinyConstraints;
+		};
+		672BBFC427833B0400B8F05F /* MobilliumBuilders */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 672BBFC327833B0400B8F05F /* XCRemoteSwiftPackageReference "MobilliumBuilders" */;
+			productName = MobilliumBuilders;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 672BBF9F2779D7F300B8F05F /* Project object */;
 }
