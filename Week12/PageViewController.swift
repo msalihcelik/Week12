@@ -13,6 +13,7 @@ class PageViewController: UIViewController, UIGestureRecognizerDelegate {
     
     private var viewControllers = [CustomViewController]()
     private var currentPageIndex = 0
+    private var pageVC = UIPageViewController()
     
     private let redColorLabel = UILabelBuilder()
         .isUserInteractionEnabled(true)
@@ -39,7 +40,7 @@ class PageViewController: UIViewController, UIGestureRecognizerDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureContents()
-        presentPageVC()
+        configurePageViewController()
         addSubViews()
     }
     
@@ -52,31 +53,35 @@ class PageViewController: UIViewController, UIGestureRecognizerDelegate {
         gestureLabelDoubleTap()
     }
     
-    private func presentPageVC() {
+    private func configurePageViewController() {
         guard let first = viewControllers.first else { return }
         
-        let pageVC = UIPageViewController(transitionStyle: .pageCurl,
+        let tempPageVC = UIPageViewController(transitionStyle: .pageCurl,
                                           navigationOrientation: .horizontal,
-                                          options: nil)
-        pageVC.delegate = self
-        pageVC.dataSource = self
-        pageVC.setViewControllers([first],
+                                            options: nil)
+        tempPageVC.delegate = self
+        tempPageVC.dataSource = self
+        tempPageVC.setViewControllers([first],
                                   direction: .forward,
                                   animated: true,
                                   completion: nil)
-        self.addChild(pageVC)
-        self.view.addSubview(pageVC.view)
+        pageVC = tempPageVC
     }
     
     private func addSubViews() {
+        addChild(pageVC)
+        
+        view.addSubview(pageVC.view)
+        pageVC.view.edgesToSuperview()
+        
         view.addSubview(redColorLabel)
         redColorLabel.centerXToSuperview()
-        redColorLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -250).isActive = true
-        redColorLabel.edgesToSuperview(excluding: [.top, .bottom], insets: .left(100) + .right(100), isActive: true, usingSafeArea: true)
+        redColorLabel.bottomToSuperview().constant = -250
+        redColorLabel.edgesToSuperview(excluding: [.top, .bottom], insets: .left(100) + .right(100), usingSafeArea: true)
         
         view.addSubview(whiteColorLabel)
         whiteColorLabel.centerXToSuperview()
-        whiteColorLabel.topToBottom(of: redColorLabel, offset: 10, relation: .equal, priority: .required, isActive: true)
+        whiteColorLabel.topToBottom(of: redColorLabel, offset: 10)
         whiteColorLabel.width(to: redColorLabel)
     }
     

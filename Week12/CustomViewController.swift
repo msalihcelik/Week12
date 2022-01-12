@@ -36,6 +36,6 @@ class CustomViewController: UIViewController {
         view.addSubview(myLabel)
         myLabel.centerXToSuperview()
         myLabel.centerYToSuperview()
-        myLabel.edgesToSuperview(excluding: [.top, .bottom], insets: .init(top: 0, left: 100, bottom: 0, right: 100), isActive: true, usingSafeArea: true)
+        myLabel.edgesToSuperview(excluding: [.top, .bottom], insets: .init(top: 0, left: 100, bottom: 0, right: 100), usingSafeArea: true)
     }
 }
