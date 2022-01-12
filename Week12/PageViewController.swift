@@ -11,23 +11,49 @@ import TinyConstraints
 
 class PageViewController: UIViewController, UIGestureRecognizerDelegate {
     
-    private var views = [CustomViewController]()
+    private var viewControllers = [CustomViewController]()
+    private var currentPageIndex = 0
+    
+    private let redColorLabel = UILabelBuilder()
+        .isUserInteractionEnabled(true)
+        .text("One Tap")
+        .cornerRadius(5)
+        .borderColor(UIColor.black.cgColor)
+        .borderWidth(2)
+        .backgroundColor(.systemGray4)
+        .clipsToBounds(true)
+        .textAlignment(.center)
+        .build()
+    
+    private let whiteColorLabel = UILabelBuilder()
+        .isUserInteractionEnabled(true)
+        .text("Double Tap")
+        .cornerRadius(5)
+        .borderColor(UIColor.black.cgColor)
+        .borderWidth(2)
+        .backgroundColor(.systemGray4)
+        .clipsToBounds(true)
+        .textAlignment(.center)
+        .build()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureContents()
-        self.presentPageVC()
+        presentPageVC()
+        addSubViews()
     }
     
     private func configureContents() {
-        views.append(CustomViewController(bgcolor: .red, text: "1. ViewController"))
-        views.append(CustomViewController(bgcolor: .blue, text: "2. ViewController"))
-        views.append(CustomViewController(bgcolor: .yellow, text: "3. ViewController"))
-        views.append(CustomViewController(bgcolor: .darkGray, text: "4. ViewController"))
+        viewControllers.append(CustomViewController(bgcolor: .red, text: "1. ViewController"))
+        viewControllers.append(CustomViewController(bgcolor: .blue, text: "2. ViewController"))
+        viewControllers.append(CustomViewController(bgcolor: .yellow, text: "3. ViewController"))
+        viewControllers.append(CustomViewController(bgcolor: .darkGray, text: "4. ViewController"))
+        gestureLabelOneTap()
+        gestureLabelDoubleTap()
     }
     
     private func presentPageVC() {
-        guard let first = views.first else { return }
+        guard let first = viewControllers.first else { return }
         
         let pageVC = UIPageViewController(transitionStyle: .pageCurl,
                                           navigationOrientation: .horizontal,
@@ -41,20 +67,64 @@ class PageViewController: UIViewController, UIGestureRecognizerDelegate {
         self.addChild(pageVC)
         self.view.addSubview(pageVC.view)
     }
+    
+    private func addSubViews() {
+        view.addSubview(redColorLabel)
+        redColorLabel.centerXToSuperview()
+        redColorLabel.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: -250).isActive = true
+        redColorLabel.edgesToSuperview(excluding: [.top, .bottom], insets: .left(100) + .right(100), isActive: true, usingSafeArea: true)
+        
+        view.addSubview(whiteColorLabel)
+        whiteColorLabel.centerXToSuperview()
+        whiteColorLabel.topToBottom(of: redColorLabel, offset: 10, relation: .equal, priority: .required, isActive: true)
+        whiteColorLabel.width(to: redColorLabel)
+    }
+    
+    private func gestureLabelOneTap() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didOneTap(_:)))
+        tapGesture.numberOfTapsRequired = 1
+        redColorLabel.addGestureRecognizer(tapGesture)
+    }
+    
+    private func gestureLabelDoubleTap() {
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(didDoubleTap(_:)))
+        tapGesture.numberOfTapsRequired = 2
+        whiteColorLabel.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc
+    private func didOneTap(_ gesture: UIGestureRecognizer) {
+        viewControllers[currentPageIndex].view.backgroundColor = .red
+    }
+    
+    @objc
+    private func didDoubleTap(_ gesture: UIGestureRecognizer) {
+        viewControllers[currentPageIndex].view.backgroundColor = .white
+    }
 }
 
 //MARK: - UIPageViewControllerDataSource Methods
 extension PageViewController: UIPageViewControllerDataSource, UIPageViewControllerDelegate {
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerBefore viewController: UIViewController) -> UIViewController? {
-        guard let index = views.firstIndex(of: viewController as! CustomViewController), index > 0 else { return nil }
+        guard let index = viewControllers.firstIndex(of: viewController as! CustomViewController), index > 0 else { return nil }
         let before = index - 1
-        return views[before]
+        return viewControllers[before]
     }
     
     func pageViewController(_ pageViewController: UIPageViewController, viewControllerAfter viewController: UIViewController) -> UIViewController? {
-        guard let index = views.firstIndex(of: viewController as! CustomViewController), index < (views.count - 1) else { return nil }
+        guard let index = viewControllers.firstIndex(of: viewController as! CustomViewController), index < (viewControllers.count - 1) else { return nil }
         let after = index + 1
-        return views[after]
+        return viewControllers[after]
+    }
+    
+    func pageViewController(_ pageViewController: UIPageViewController,
+                            didFinishAnimating finished: Bool,
+                            previousViewControllers: [UIViewController],
+                            transitionCompleted completed: Bool) {
+        guard completed,
+              let currentVC = pageViewController.viewControllers?.first as? CustomViewController,
+              let index = viewControllers.firstIndex(of: currentVC) else { return }
+        currentPageIndex = index
     }
 }
