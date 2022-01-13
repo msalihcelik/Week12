@@ -14,15 +14,11 @@
 		672BBFB22779D7F300B8F05F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672BBFB02779D7F300B8F05F /* Main.storyboard */; };
 		672BBFB42779D7F400B8F05F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 672BBFB32779D7F400B8F05F /* Assets.xcassets */; };
 		672BBFB72779D7F400B8F05F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 672BBFB52779D7F400B8F05F /* LaunchScreen.storyboard */; };
-
-		67ACF5AE278E8F6400B5CB90 /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67ACF5AC278E8F6400B5CB90 /* CustomViewController.swift */; };
-		67ACF5AF278E8F6400B5CB90 /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67ACF5AD278E8F6400B5CB90 /* PageViewController.swift */; };
-		67ACF5B2278E8F8A00B5CB90 /* MobilliumBuilders in Frameworks */ = {isa = PBXBuildFile; productRef = 67ACF5B1278E8F8A00B5CB90 /* MobilliumBuilders */; };
-		67ACF5B5278E8F9700B5CB90 /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = 67ACF5B4278E8F9700B5CB90 /* TinyConstraints */; };
-    
 		672BBFC227833ADC00B8F05F /* TinyConstraints in Frameworks */ = {isa = PBXBuildFile; productRef = 672BBFC127833ADC00B8F05F /* TinyConstraints */; };
 		672BBFC527833B0400B8F05F /* MobilliumBuilders in Frameworks */ = {isa = PBXBuildFile; productRef = 672BBFC427833B0400B8F05F /* MobilliumBuilders */; };
-
+		672BBFC9278464F900B8F05F /* PageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672BBFC8278464F900B8F05F /* PageViewController.swift */; };
+		672BBFCD2784FA4500B8F05F /* DashboardTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672BBFCC2784FA4500B8F05F /* DashboardTabBarController.swift */; };
+		672BBFEF2787B18000B8F05F /* CustomViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 672BBFEE2787B18000B8F05F /* CustomViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,13 +31,11 @@
 		672BBFB32779D7F400B8F05F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		672BBFB62779D7F400B8F05F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		672BBFB82779D7F400B8F05F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-
-		67ACF5AC278E8F6400B5CB90 /* CustomViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
-		67ACF5AD278E8F6400B5CB90 /* PageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
-
+		672BBFC8278464F900B8F05F /* PageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageViewController.swift; sourceTree = "<group>"; };
+		672BBFCC2784FA4500B8F05F /* DashboardTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardTabBarController.swift; sourceTree = "<group>"; };
+		672BBFEE2787B18000B8F05F /* CustomViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomViewController.swift; sourceTree = "<group>"; };
 		C728510FD378F76F8A1A7D6F /* Pods_Week12.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Week12.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8E36CA77C0372198FBF0CEE /* Pods-Week12.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Week12.release.xcconfig"; path = "Target Support Files/Pods-Week12/Pods-Week12.release.xcconfig"; sourceTree = "<group>"; };
-
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -49,14 +43,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
-				67ACF5B2278E8F8A00B5CB90 /* MobilliumBuilders in Frameworks */,
-				67ACF5B5278E8F9700B5CB90 /* TinyConstraints in Frameworks */,
-
 				0378D21F5C8BA7152C1CF1D6 /* Pods_Week12.framework in Frameworks */,
 				672BBFC527833B0400B8F05F /* MobilliumBuilders in Frameworks */,
 				672BBFC227833ADC00B8F05F /* TinyConstraints in Frameworks */,
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,11 +85,12 @@
 				672BBFAC2779D7F300B8F05F /* SceneDelegate.swift */,
 				672BBFAE2779D7F300B8F05F /* ViewController.swift */,
 				672BBFB02779D7F300B8F05F /* Main.storyboard */,
-				67ACF5AC278E8F6400B5CB90 /* CustomViewController.swift */,
-				67ACF5AD278E8F6400B5CB90 /* PageViewController.swift */,
 				672BBFB32779D7F400B8F05F /* Assets.xcassets */,
 				672BBFB52779D7F400B8F05F /* LaunchScreen.storyboard */,
 				672BBFB82779D7F400B8F05F /* Info.plist */,
+				672BBFC8278464F900B8F05F /* PageViewController.swift */,
+				672BBFCC2784FA4500B8F05F /* DashboardTabBarController.swift */,
+				672BBFEE2787B18000B8F05F /* CustomViewController.swift */,
 			);
 			path = Week12;
 			sourceTree = "<group>";
@@ -133,13 +123,8 @@
 			);
 			name = Week12;
 			packageProductDependencies = (
-
-				67ACF5B1278E8F8A00B5CB90 /* MobilliumBuilders */,
-				67ACF5B4278E8F9700B5CB90 /* TinyConstraints */,
-
 				672BBFC127833ADC00B8F05F /* TinyConstraints */,
 				672BBFC427833B0400B8F05F /* MobilliumBuilders */,
-
 			);
 			productName = Week12;
 			productReference = 672BBFA72779D7F300B8F05F /* Week12.app */;
@@ -170,13 +155,8 @@
 			);
 			mainGroup = 672BBF9E2779D7F300B8F05F;
 			packageReferences = (
-
-				67ACF5B0278E8F8A00B5CB90 /* XCRemoteSwiftPackageReference "MobilliumBuilders" */,
-				67ACF5B3278E8F9700B5CB90 /* XCRemoteSwiftPackageReference "TinyConstraints" */,
-
 				672BBFC027833ADC00B8F05F /* XCRemoteSwiftPackageReference "TinyConstraints" */,
 				672BBFC327833B0400B8F05F /* XCRemoteSwiftPackageReference "MobilliumBuilders" */,
-
 			);
 			productRefGroup = 672BBFA82779D7F300B8F05F /* Products */;
 			projectDirPath = "";
@@ -248,10 +228,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				672BBFAF2779D7F300B8F05F /* ViewController.swift in Sources */,
-				67ACF5AF278E8F6400B5CB90 /* PageViewController.swift in Sources */,
+				672BBFCD2784FA4500B8F05F /* DashboardTabBarController.swift in Sources */,
 				672BBFAB2779D7F300B8F05F /* AppDelegate.swift in Sources */,
+				672BBFEF2787B18000B8F05F /* CustomViewController.swift in Sources */,
 				672BBFAD2779D7F300B8F05F /* SceneDelegate.swift in Sources */,
-				67ACF5AE278E8F6400B5CB90 /* CustomViewController.swift in Sources */,
+				672BBFC9278464F900B8F05F /* PageViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -475,22 +456,6 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-
-		67ACF5B0278E8F8A00B5CB90 /* XCRemoteSwiftPackageReference "MobilliumBuilders" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/mobillium/MobilliumBuilders.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-			};
-		};
-		67ACF5B3278E8F9700B5CB90 /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/roberthein/TinyConstraints.git";
-			requirement = {
-				branch = master;
-				kind = branch;
-
 		672BBFC027833ADC00B8F05F /* XCRemoteSwiftPackageReference "TinyConstraints" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/roberthein/TinyConstraints.git";
@@ -505,23 +470,11 @@
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 1.0.0;
-
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-
-		67ACF5B1278E8F8A00B5CB90 /* MobilliumBuilders */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 67ACF5B0278E8F8A00B5CB90 /* XCRemoteSwiftPackageReference "MobilliumBuilders" */;
-			productName = MobilliumBuilders;
-		};
-		67ACF5B4278E8F9700B5CB90 /* TinyConstraints */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 67ACF5B3278E8F9700B5CB90 /* XCRemoteSwiftPackageReference "TinyConstraints" */;
-			productName = TinyConstraints;
-
 		672BBFC127833ADC00B8F05F /* TinyConstraints */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 672BBFC027833ADC00B8F05F /* XCRemoteSwiftPackageReference "TinyConstraints" */;
@@ -531,7 +484,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 672BBFC327833B0400B8F05F /* XCRemoteSwiftPackageReference "MobilliumBuilders" */;
 			productName = MobilliumBuilders;
-
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
