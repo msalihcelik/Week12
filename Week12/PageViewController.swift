@@ -15,7 +15,7 @@ class PageViewController: UIViewController, UIGestureRecognizerDelegate {
     private var currentPageIndex = 0
     private let pageVC = UIPageViewController(transitionStyle: .pageCurl,
                                               navigationOrientation: .horizontal,
-                                                options: nil)
+                                              options: nil)
     
     private let redColorLabel = UILabelBuilder()
         .isUserInteractionEnabled(true)
