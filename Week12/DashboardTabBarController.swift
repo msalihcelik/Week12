@@ -34,6 +34,7 @@ extension DashboardTabBarController: UITabBarControllerDelegate {
     }
 }
 
+//MARK: - DashboardTabBarController methods
 extension DashboardTabBarController {
     
     private func createViewController() -> UIViewController {
