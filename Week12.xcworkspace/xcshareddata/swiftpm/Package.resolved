@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "MobilliumBuilders",
+        "repositoryURL": "https://github.com/mobillium/MobilliumBuilders.git",
+        "state": {
+          "branch": null,
+          "revision": "c6467e836b342ce40a8b1b50092d4febc1e8bfa6",
+          "version": "1.4.1"
+        }
+      },
+      {
+        "package": "TinyConstraints",
+        "repositoryURL": "https://github.com/roberthein/TinyConstraints.git",
+        "state": {
+          "branch": null,
+          "revision": "3262e5c591d4ab6272255df2087a01bbebd138dc",
+          "version": "4.0.2"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
