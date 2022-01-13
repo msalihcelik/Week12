@@ -13,7 +13,9 @@ class PageViewController: UIViewController, UIGestureRecognizerDelegate {
     
     private var viewControllers = [CustomViewController]()
     private var currentPageIndex = 0
-    private var pageVC = UIPageViewController()
+    private let pageVC = UIPageViewController(transitionStyle: .pageCurl,
+                                              navigationOrientation: .horizontal,
+                                                options: nil)
     
     private let redColorLabel = UILabelBuilder()
         .isUserInteractionEnabled(true)
@@ -55,22 +57,16 @@ class PageViewController: UIViewController, UIGestureRecognizerDelegate {
     
     private func configurePageViewController() {
         guard let first = viewControllers.first else { return }
-        
-        let tempPageVC = UIPageViewController(transitionStyle: .pageCurl,
-                                          navigationOrientation: .horizontal,
-                                            options: nil)
-        tempPageVC.delegate = self
-        tempPageVC.dataSource = self
-        tempPageVC.setViewControllers([first],
+        pageVC.delegate = self
+        pageVC.dataSource = self
+        pageVC.setViewControllers([first],
                                   direction: .forward,
                                   animated: true,
                                   completion: nil)
-        pageVC = tempPageVC
     }
     
     private func addSubViews() {
         addChild(pageVC)
-        
         view.addSubview(pageVC.view)
         pageVC.view.edgesToSuperview()
         
